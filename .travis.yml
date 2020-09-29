@@ -5,7 +5,7 @@ services: mongodb
 cache:  
   directories:
     - "node_modules"
-    sudo: false
+sudo: false
 install:
   - npm install
 script:
