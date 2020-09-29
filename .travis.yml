@@ -1,17 +1,15 @@
 language: node_js
 node_js:
-  - "10"
   - "12"
-  - "14"
 services: mongodb  
 cache:  
   directories:
     - "node_modules"
+    sudo: false
 install:
   - npm install
-# script:
-#   - npm run lint
-#   - npm test
+script:
+  - npm test
 deploy:
   - provider: script
     skip_cleanup: true
